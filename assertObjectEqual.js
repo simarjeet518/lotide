@@ -44,24 +44,18 @@ const eqObjects = function(object1, object2) {
   return result;
 };
 const assertObjectsEqual = function(object1, object2) {
-  
+  const inspect = require('util').inspect; 
   if (eqObjects(object1,object2)) {
-    console.log(object1);
-    console.log("-------------------");
-    console.log(object2);
-    console.log("✅ Assertion Passed: Objects are  equal");
+    msg = `✅  Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`;
   } else {
-    console.log(object1);
-    console.log("-------------------");
-    console.log(object2);
-    console.log(`🛑 Assertion Failed: objects are  not equal`);
+    msg = `🛑 Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`;
   }
-  
+  return msg;
 };
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertObjectsEqual(cd,dc);
-assertObjectsEqual(cd,cd2);
-assertObjectsEqual(dc,cd2);
+console.log(assertObjectsEqual(cd,dc));
+console.log(assertObjectsEqual(cd,cd2));
+console.log(assertObjectsEqual(dc,cd2));
