@@ -1,36 +1,17 @@
-const eqArrays = function(arr1 ,arr2) {
-  let result = true;
-  let lengthOfArray = arr1.length;
-  //console.log(arr2);                             // if there is diferrence in lengths of 2 arrays
-  if (arr2.length > lengthOfArray) {
-    lengthOfArray = arr2.length;             //  length of large array is used in for LOOP to check equality of an array
-  }
-  for (let i = 0; i < lengthOfArray; i++) {
-    if (!(arr1[i] === arr2[i])) {
-      result = false;
-    }
-  }
-  return result;
-};
-
-const assertArrayEqual = function(arr1 ,arr2) {
-  if (eqArrays(arr1,arr2)) {
-    console.log("Arrays Matched!!");
-  } else {
-    console.log("Arrays do not matched");
-  }
-};
-const flatten = function(nestedArray) {
+const assertArrayEqual = require('./assertArrayEqual');
+const flatten = function(arr) {
   let flattenArray = [];
-  for (let i = 0; i < nestedArray.length; i++) {
-    if (Array.isArray(nestedArray[i])) {
-      for (let j = 0; j < nestedArray[i].length; j++) {
-        flattenArray.push(nestedArray[i][j]);
-      }
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+     
+     flattenArray=flattenArray.concat(flatten(arr[i]));
+      //flatten[arr[i]];
+    
+    
     } else {
-      flattenArray.push(nestedArray[i]);
+      flattenArray.push(arr[i]);
     }
   }
   return flattenArray;
 };
-console.log(flatten([1,2,3,[1,2],[1,2,3],78,89]));
+console.log(flatten([1,2,3,[1,[2]],[1,2,3],78,89]));
