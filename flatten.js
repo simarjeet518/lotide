@@ -20,17 +20,17 @@ const assertArrayEqual = function(arr1 ,arr2) {
     console.log("Arrays do not matched");
   }
 };
-const flatten =function(nestedArray){
-  let flattenArray=[];
-   for (let i =0; i< nestedArray.length; i++){
-     if(Array.isArray(nestedArray[i])){
-       for(let j=0; j<nestedArray[i].length; j++){
-        flattenArray.push(nestedArray[i][j])
-       }
-     } else {
-       flattenArray.push(nestedArray[i]);
-     }
-   }
-   return flattenArray;
+const flatten = function(nestedArray) {
+  let flattenArray = [];
+  for (let i = 0; i < nestedArray.length; i++) {
+    if (Array.isArray(nestedArray[i])) {
+      for (let j = 0; j < nestedArray[i].length; j++) {
+        flattenArray.push(nestedArray[i][j]);
+      }
+    } else {
+      flattenArray.push(nestedArray[i]);
+    }
+  }
+  return flattenArray;
 };
 console.log(flatten([1,2,3,[1,2],[1,2,3],78,89]));
