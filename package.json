@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@kaursimarjeet/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "learning project with javaScript and mocha framework",
   "main": "assertArrayEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/simarjeet518/lotide.git"
   },
-  "author": "",
+  "author": "Simarjeet Kaur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/simarjeet518/lotide/issues"
