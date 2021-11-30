@@ -1,6 +1,6 @@
 {
   "name": "@kaursimarjeet/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "learning project with javaScript and mocha framework",
   "main": "assertArrayEqual.js",
   "directories": {
