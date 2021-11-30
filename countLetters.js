@@ -17,5 +17,3 @@ const countLetters = function(sentence) {
   return returnObj;
 };
 module.exports = countLetters;
-// //console.log(countLetters('lighthouse in the house'));
-// assertEqual(countLetters('lighthouse in the house').i,2);

@@ -10,19 +10,5 @@ const findKey = function(object,callback) {
   }
   return result;
 };
-// assertEqual(findKey({
-//   "Blue Hill": { stars: 1 },
-//   "Akaleri":   { stars: 3 },
-//   "noma":      { stars: 2 },
-//   "elBulli":   { stars: 3 },
-//   "Ora":       { stars: 2 },
-//   "Akelarre":  { stars: 3 }
-// }, x => x.stars === 2),"noma");
-// const example = {
-//   SImar : { city :"vancouver"},
-//   Allen : { city :"surrey"},
-//   Asley :{  city :"Burnaby"}
 
-// };
-// assertEqual((findKey(example, x => x.city === "surrey")),"Allen");
 module.exports = findKey;

@@ -39,17 +39,5 @@ const eqObjects = function(object1, object2) {
   }
   return result;
 };
-// const cd = { c: "1", d: ["2", 3] ,e :["2" ,"4"] };
-// const dc = { d: ["2", 3], c: "1" };
-
-
-// const cd2 = { c: "1", d: ["2", 3] ,e: [2 ,4]};
-// assertEqual(eqObjects(cd, cd2),false);
-// assertEqual(eqObjects(cd, dc),false);
-// assertEqual(eqObjects(dc, cd2),false);
-// assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) ,true);
-// assertEqual(eqObjects({ a: {z:{z: 1 }}, b: 2 }, { a: { z:{z: 1} }, b: 2 }),true);
-// assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),false);
-// assertEqual(eqObjects({ a: [1], b: 2 }, { a: {a:1}, b: 2 }),false);
 
 module.exports = eqObjects;
