@@ -1,4 +1,4 @@
-const assertArrayEqual = require('./assertArrayEqual');
+
 const middle = function(inputArray) {
   let middleArray = [];
   let midPos = parseInt(inputArray.length / 2);
@@ -15,9 +15,4 @@ const middle = function(inputArray) {
   return middleArray;
 };
 
-assertArrayEqual(middle([1,2,3,4,5]),[3]);
-assertArrayEqual(middle([1]),[]);
-assertArrayEqual(middle([1,2]),[]);
-assertArrayEqual(middle([1,2,3,4]),[2,3]);
-assertArrayEqual(middle([1,2,3,4,5,6]),[3,4]);
-assertArrayEqual(middle([1,2,3,4,5,6,7]),[4]);
+module.exports = middle;

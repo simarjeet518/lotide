@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const eqArrays = function(arr1 , arr2) {
   let result = true;
   // let lengthOfArray = arr1.length;   // if there is diferrence in lengths of 2 arrays arrays not equals
@@ -33,11 +31,5 @@ const eqArrays = function(arr1 , arr2) {
   }
   return result;
 };
-module.exports = eqArrays;
+module.exports = eqArrays ;
 
-assertEqual(eqArrays([1,2,3], [1,2,3]), true);
-// assertEqual(eqArrays([1,2,3,"4"], [1,2,3]), false);
-// assertEqual(eqArrays([1,2], [1,2,3]), false);
-// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]) ,false);
-// assertEqual(eqArrays(["1", "2", "3",[1,2]], ["1", "2", "3",[1,2]]) ,true);
-// assertEqual(eqArrays([[[1],[[2],3]]], [[1,2,3]]) ,false);

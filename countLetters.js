@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 const countLetters = function(sentence) {
   sentence = sentence.toLowerCase();
   let returnObj = new Object();
@@ -17,5 +16,6 @@ const countLetters = function(sentence) {
  
   return returnObj;
 };
-//console.log(countLetters('lighthouse in the house'));
-assertEqual(countLetters('lighthouse in the house').i,2);
+module.exports = countLetters;
+// //console.log(countLetters('lighthouse in the house'));
+// assertEqual(countLetters('lighthouse in the house').i,2);

@@ -1,9 +1,12 @@
-const assertEqual = require('./assertEqual');
 
 const tail = function(arr) {
-  arr.shift();
-  return arr;
+  let tailArr=[];
+  for(let item of arr){
+    tailArr.push(item);
+  }
+  tailArr.shift();
+  return  tailArr;
   
 };
-assertEqual(tail([1,2,3,4]).length,3);
-assertEqual(tail([]).length,0);
+
+ module.exports =tail;

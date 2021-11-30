@@ -1,5 +1,3 @@
-const assertArrayEqual = require('./assertArrayEqual');
-//assertArrayEqual([1,2,3,4,5],[1,2,4,5]);
 const letterPositions = function(sentence) {
   sentence = sentence.toLowerCase();
   let returnObj = new Object();
@@ -23,7 +21,8 @@ const letterPositions = function(sentence) {
   }
   return returnObj;
 };
-console.log(letterPositions("lighthouse in the house"));
-//letterPositions("hello");
-assertArrayEqual(letterPositions("hello").e, [1]);
-assertArrayEqual(letterPositions("hello").l, [2,3]);
+// console.log(letterPositions("lighthouse in the house"));
+// //letterPositions("hello");
+// assertArrayEqual(letterPositions("hello").e, [1]);
+// assertArrayEqual(letterPositions("hello").l, [2,3]);
+module.exports = letterPositions;
