@@ -3,8 +3,8 @@ const flatten = function(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
      
-     flattenArray=flattenArray.concat(flatten(arr[i]));
-      //flatten[arr[i]];
+      flattenArray = flattenArray.concat(flatten(arr[i]));
+      
     
     
     } else {
@@ -13,5 +13,5 @@ const flatten = function(arr) {
   }
   return flattenArray;
 };
-// console.log(flatten([1,2,3,[1,[2]],[1,2,3],78,89]));
+
 module.exports = flatten;

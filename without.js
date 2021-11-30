@@ -15,10 +15,5 @@ const without = function(arr1,unwantedArrItems) {
 
   return FilteredArray;
 };
-// console.log(without([1, 2, 3], [1, 3, 4])); // => [2, 3]
-// console.log(without(["1", "2", "3",4,5,6], [1, 2, "3"]));
-// const words = ["hello", "world", "lighthouse"];
-// console.log(without(words, ["lighthouse"]));
-// console.log(words);
-// assertArrayEqual(words, ["hello", "world", "lighthouse"]);
+
 module.exports = without;
